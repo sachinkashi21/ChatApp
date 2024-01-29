@@ -66,7 +66,8 @@
     </div>
 
     <div class="form col-10 col-md-6 offset-1 offset-md-3 ">
-        <form method="POST" action="/chats/<%=toUser._id%>" id="send-msg-form">
+        <form method="POST" action="/chats/<%=toUser._id%>" id="send-msg-form" autocomplete="off">
+          <input autocomplete="false" name="hidden" type="text" style="display:none;">
           <input type="text" name="chat[content]" id="content-form" placeholder="Write your message here">
           <button class="form_submit"><i class="fa-solid fa-paper-plane"></i></button>
         </form>
