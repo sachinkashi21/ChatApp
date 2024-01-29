@@ -19,7 +19,7 @@ router.route("/signUp")
     });
     let regisUser=await User.register(user,password);
 
-    res.send("success");
+    res.redirect("/login");
 })
 
 router.route("/login")
