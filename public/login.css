@@ -1,0 +1,9 @@
+.login-form{
+    border-radius: 1rem;
+    padding: 1rem ;
+    box-shadow: 2px 4px 10px grey;
+}
+
+.form-box{
+    padding: 5rem 0;
+}

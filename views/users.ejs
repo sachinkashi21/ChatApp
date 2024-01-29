@@ -1,0 +1,14 @@
+<%- include("./includes/boilerplate1.ejs") %>
+    <h2>Users</h2>
+    <div class="row">
+        <% for(let user of allUsers){ %>
+            <div class="card user-box col-11 col-sm-5 col-md-4 col-lg-3" >
+                <div class="single-user card-body">
+                  <h5 class="card-title">@<%=user.username%></h5>
+                  <p class="card-text"><%=user.email%></p>
+                  <a href="/chats/<%=user.id%>" class="btn btn-dark">Chat</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<%- include("./includes/boilerplate2.ejs") %>

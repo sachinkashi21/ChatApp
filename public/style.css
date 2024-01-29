@@ -1,0 +1,180 @@
+body{
+    background-color: rgb(236,244,255) ;
+    padding: 0.5rem;
+    padding-top: 0;
+    overflow: hidden;
+}
+
+/* .edit-form{
+    height: 40vh;
+    width: 40vw;
+    background-color: aliceblue;
+    padding: 2rem;
+    border-radius: 30px 30px 30px 0;
+    border: 2px solid white;
+    box-shadow: 2px 4px 10px grey;
+} */
+/* .container-edit{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .form-chats{
+    display: inline-block;
+} */
+
+/* .txt-edit{
+    border:0px;
+} */
+
+/* h1{
+    text-align: center;
+} */
+
+
+/* .from-edit , .to-edit{
+    font-size: 1rem;    
+} */
+
+.align{
+    display: flex;
+}
+
+.row>.box{
+    padding: 0px;
+}
+.box{
+    background-color: #ffffff;
+    border-radius: 1rem ;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgb(130, 130, 130);
+    overflow: auto;
+    padding-bottom: 400px;
+}
+
+.box::-webkit-scrollbar {
+    width: 0em;
+}
+.box h2{
+    text-align: center;
+    position: sticky; 
+    top: 0px;
+    padding: 1rem 0;
+    border-top-left-radius:1rem;
+    border-top-right-radius:1rem;
+    margin:0;
+    margin-bottom: 1rem;
+    background-color: rgb(245,245,245);
+    border-bottom: 1px solid rgb(240,240,240);
+}
+.chat{
+    padding: 0.5rem;
+    display: inline-block;
+    
+    margin-bottom: 0.5rem;
+}
+.date{
+    font-size: 0.75rem;
+    color: rgb(182,184,190);
+    display:inline-block;
+    margin: 0.1rem auto; 
+}
+.chat-me .date{
+    color: rgb(120,120,120)
+}
+.chat-you{
+    margin-left: 0.5rem;
+    border-radius: 15px 15px 15px 0px;
+    margin-right: auto;
+    background-color: rgb(242,242,244);
+}
+.chat-me{
+    margin-right: 0.5rem;
+    color: white;
+    background-color: rgb(11,18,26);
+    border-radius: 15px 15px 0px 15px;
+    text-align: right;
+    margin-left: auto;
+}
+
+.form{
+    display: block;
+    line-height: 2rem;
+    border-radius: 2rem;
+    position: fixed;
+    bottom: 5px;
+    background-color: rgb(11,18,26);
+    color: #ffffff;
+    padding: 0.5rem;
+}
+#send-msg-form{
+    margin: auto 0;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#content-form{
+    background-color: rgb(11,18,26);
+    color: rgb(242,242,244);
+    border: 0px;
+    width: 80%;
+    font-size: 1rem;
+}
+#content-fom:active{
+    background-color: red;
+}
+.form_submit{
+    display: block;
+    background-color: rgb(242,242,244);
+    color: rgb(11,18,26);
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 0.15rem;
+    right: 0.15rem;
+    border-radius: 1.6rem;
+}
+
+
+
+
+.top-pannel{
+    line-height: 10vh;
+    margin-bottom: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius:1rem ;
+}
+.top-pannel .navbar-brand{
+    font-size: 1.8rem;
+}
+
+.nav-button{
+    margin: auto 0px;
+}
+.nav-button button{
+    background-color: rgb(11,18,26);
+    color: #ffffff;
+}
+
+.container-main{
+    width: 100vw;
+}
+
+
+.end-container{
+    flex-grow: 1;
+}
+
+.dash-board{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+<%- include("./includes/boilerplate1.ejs") %>
+    <div class="form-box row">
+        <form action="/signUp" method="POST" class="login-form col-10 offset-1 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4" novalidate>
+            <h2>Sign-Up</h2>
+            <label class="form-label" for="username">Username:</label>
+            <input class="form-control" type="text" name="username" id="username" required>
+            <label class="form-label" for="email">email:</label>
+            <input class="form-control" type="text" name="email" id="email" required>
+            <label class="form-label" for="password">password:</label>
+            <input class="form-control" type="password" name="password" id="password" required>
+            <button type="submit" class="btn btn-dark mt-3">Submit</button>
+            <hr>
+            <a href="/login" style="color: black;">already signed in?</a>
+        </form>
+    </div>
+    
+<%- include("./includes/boilerplate1.ejs") %>

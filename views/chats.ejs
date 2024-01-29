@@ -1,0 +1,84 @@
+<%- include("./includes/boilerplate1.ejs") %>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary top-pannel">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Chat It</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/users">Users</a>
+          </li>
+        </ul>
+        <form class="d-flex nav-button" action="/logout">
+          <button class="btn btn-light rounded-pill" type="submit">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="align">
+    <div class="row container-main">
+      <div class="box col-10 col-sm-6 col-lg-4 offset-1 offset-sm-3 offset-lg-4">
+        <h2>
+          <%=toUser.username%>
+        </h2>
+        <% for(let i=0;i<chats.length;i++){ %>
+          <%if(chats[i].from.id===currUser.id){%>
+            <div class="chat chat-me">
+          <%} else{%>
+            <div class="chat chat-you">
+          <%}%>
+              <div class="content">
+                <p>
+                  <%= chats[i].content %>
+                </p>
+              </div>
+
+              <% let arr=chats[i].date.toString().split(" ") 
+                let date=arr[2]+" "+arr[1]+" , "+arr[3]+" ("+arr[0]+")"; %>
+                      <p class="date">Time: <%= arr[4]%></p>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      <p class="date">
+                        <%= date%>
+                      </p>
+                </div>
+              <% }%>
+            </div>
+
+            <div class="end-container col-3 mt-5">
+              <div class="card dash-board offset-1">
+                <div class="card-body p-1">
+                  <h5 class="card-title">My Dashboard</h5>
+                  <hr>
+                  <p class="card-text"><b>Username</b>: <br><em>
+                      <%=currUser.username%>
+                    </em></p>
+                  <p class="card-text"><b>Email</b>: <br><em>
+                      <%=currUser.email%>
+                    </em></p>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <div class="form col-10 col-md-6 offset-1 offset-md-3 ">
+        <form method="POST" action="/chats/<%=toUser._id%>" id="send-msg-form">
+          <input type="text" name="chat[content]" id="content-form" placeholder="Write your message here">
+          <button class="form_submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+  </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+    <script id="toUserId" modelId="<%=toUser.id%>"></script>
+    <script>
+      let msgCont=document.querySelector(".box");
+      msgCont.scrollTo(0,msgCont.scrollHeight);
+    </script>
+<%- include("./includes/boilerplate2.ejs") %>
