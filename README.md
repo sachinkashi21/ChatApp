@@ -1,4 +1,5 @@
 <h2>CHAT IT</h2> 
+Working demo link: 
 <h3>A Full Stack Web Based Chatting Application</h3>
 <p><b>Technologies and Tech Stack:</b></p>
 <ul>
@@ -11,3 +12,6 @@
 </ul>
 
 <a href="https://chatit-eucm.onrender.com">Deployed Link</a>
+
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7157843582832275456" height="835" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
